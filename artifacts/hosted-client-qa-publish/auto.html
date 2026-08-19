@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/" />
+    
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css" />
+    <link rel="stylesheet" href="app.zxiz86ws8d.css" />
+    <link rel="stylesheet" href="BlazorWebApp.focnv4kswc.styles.css" />
+    <script type="importmap">{
+  "imports": {
+    "./Components/Layout/NavMenu.razor.js": "./Components/Layout/NavMenu.4213728dye.razor.js",
+    "./Components/Layout/ReconnectModal.razor.js": "./Components/Layout/ReconnectModal.abdmv1u4y3.razor.js",
+    "./_framework/blazor.server.js": "./_framework/blazor.server.02y5zgxqby.js",
+    "./_framework/blazor.web.js": "./_framework/blazor.web.dno4xfe4w5.js",
+    "./_framework/dotnet.native.js": "./_framework/dotnet.native.j4essksm1v.js",
+    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.u7u1yxqnoc.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.zmypzub1by.js",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.js": "./lib/bootstrap/dist/js/bootstrap.bundle.6cfz1n2cew.js",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.min.js": "./lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js",
+    "./lib/bootstrap/dist/js/bootstrap.esm.min.js": "./lib/bootstrap/dist/js/bootstrap.esm.min.jj8uyg4cgr.js",
+    "./lib/bootstrap/dist/js/bootstrap.esm.js": "./lib/bootstrap/dist/js/bootstrap.esm.vr1egmr9el.js",
+    "./lib/bootstrap/dist/js/bootstrap.min.js": "./lib/bootstrap/dist/js/bootstrap.min.63fj8s7r0e.js",
+    "./lib/bootstrap/dist/js/bootstrap.js": "./lib/bootstrap/dist/js/bootstrap.notf2xhcfb.js",
+    "_framework/resource-collection.js": "./_framework/resource-collection.wZU4S.js",
+    "_framework/resource-collection.js.gz": "./_framework/resource-collection.wZU4S.js.gz"
+  },
+  "integrity": {
+    "./Components/Layout/NavMenu.4213728dye.razor.js": "sha256-5GiJeHYrFtel16qZHNoSV1fwiQoSX0rVQV5k2Vc3trQ=",
+    "./Components/Layout/NavMenu.razor.js": "sha256-5GiJeHYrFtel16qZHNoSV1fwiQoSX0rVQV5k2Vc3trQ=",
+    "./Components/Layout/ReconnectModal.abdmv1u4y3.razor.js": "sha256-5u+v90fOttEFzE2qHMGMOXmy93Ik/BaGqLrrnu6mdGU=",
+    "./Components/Layout/ReconnectModal.razor.js": "sha256-5u+v90fOttEFzE2qHMGMOXmy93Ik/BaGqLrrnu6mdGU=",
+    "./_framework/blazor.server.02y5zgxqby.js": "sha256-qA7WUAo/bg1v0JUwprn6osPzTqZm6eA7FsnWAFoVnyk=",
+    "./_framework/blazor.server.js": "sha256-qA7WUAo/bg1v0JUwprn6osPzTqZm6eA7FsnWAFoVnyk=",
+    "./_framework/blazor.web.dno4xfe4w5.js": "sha256-N20/4EWTCPe2DAMoZpUhCZponfG1Ud6PrvVNYMfGYxY=",
+    "./_framework/blazor.web.js": "sha256-N20/4EWTCPe2DAMoZpUhCZponfG1Ud6PrvVNYMfGYxY=",
+    "./_framework/dotnet.js": "sha256-ZVnWUpW7i93j/aNAQa2jIZ39arRkZJBqh3HYVhl1NiE=",
+    "./_framework/dotnet.native.j4essksm1v.js": "sha256-fR39YxX88yzIgFn7yza3dxXr6Y9ugiK0XK4izgo27ew=",
+    "./_framework/dotnet.native.js": "sha256-fR39YxX88yzIgFn7yza3dxXr6Y9ugiK0XK4izgo27ew=",
+    "./_framework/dotnet.runtime.js": "sha256-OjXfxsYRP/cygSpkbZTiu2yEQ4kgJ7vAxM82jpdKhQ8=",
+    "./_framework/dotnet.runtime.u7u1yxqnoc.js": "sha256-OjXfxsYRP/cygSpkbZTiu2yEQ4kgJ7vAxM82jpdKhQ8=",
+    "./_framework/dotnet.zmypzub1by.js": "sha256-ZVnWUpW7i93j/aNAQa2jIZ39arRkZJBqh3HYVhl1NiE=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.6cfz1n2cew.js": "sha256-mkoRoV24jV+rCPWcHDR5awPx8VuzzJKN0ibhxZ9/WaM=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.js": "sha256-mkoRoV24jV+rCPWcHDR5awPx8VuzzJKN0ibhxZ9/WaM=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js": "sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.min.js": "sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.js": "sha256-exiXZNJDwucXfuje3CbXPbuS6+Ery3z9sP+pgmvh8nA=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.min.jj8uyg4cgr.js": "sha256-QZdFT1ZNdly4rmgUBtXmXFS9BU1FTa+sPe6h794sFRQ=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.min.js": "sha256-QZdFT1ZNdly4rmgUBtXmXFS9BU1FTa+sPe6h794sFRQ=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.vr1egmr9el.js": "sha256-exiXZNJDwucXfuje3CbXPbuS6+Ery3z9sP+pgmvh8nA=",
+    "./lib/bootstrap/dist/js/bootstrap.js": "sha256-+UW802wgVfnjaSbdwyHLlU7AVplb0WToOlvN1CnzIac=",
+    "./lib/bootstrap/dist/js/bootstrap.min.63fj8s7r0e.js": "sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=",
+    "./lib/bootstrap/dist/js/bootstrap.min.js": "sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=",
+    "./lib/bootstrap/dist/js/bootstrap.notf2xhcfb.js": "sha256-+UW802wgVfnjaSbdwyHLlU7AVplb0WToOlvN1CnzIac=",
+    "./_framework/resource-collection.wZU4S.js": "sha256-d0Z3kTGhg+JLywzEcKm1rBiCaVGmdKMxu9YzCmlIvk0=",
+    "./_framework/resource-collection.wZU4S.js.gz": "sha256-d0Z3kTGhg+JLywzEcKm1rBiCaVGmdKMxu9YzCmlIvk0="
+  }
+}</script>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>EnvironmentView [Interactive Auto] - Static</title></head>
+
+<body><div class="page" b-r215xwi2mi><div class="sidebar" b-r215xwi2mi><script type="module" src="Components/Layout/NavMenu.4213728dye.razor.js" b-ajqwrrfjf8></script>
+
+<div class="top-row ps-3 navbar navbar-dark" b-ajqwrrfjf8><div class="container-fluid" b-ajqwrrfjf8><a class="navbar-brand" href b-ajqwrrfjf8>BlazorWebApp</a></div></div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" b-ajqwrrfjf8>
+
+<div id="nav-scrollable" class="nav-scrollable" b-ajqwrrfjf8><nav class="nav flex-column" b-ajqwrrfjf8><div class="nav-item px-3" b-ajqwrrfjf8><a href="" class="nav-link"><span class="bi bi-house-door-fill-nav-menu" aria-hidden="true" b-ajqwrrfjf8></span> Home
+            </a></div>
+
+        <div class="nav-item px-3" b-ajqwrrfjf8><a href="counter" class="nav-link"><span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true" b-ajqwrrfjf8></span> Counter
+            </a></div>
+
+        <div class="nav-item px-3" b-ajqwrrfjf8><a href="weather" class="nav-link"><span class="bi bi-list-nested-nav-menu" aria-hidden="true" b-ajqwrrfjf8></span> Weather
+            </a></div>
+
+        <div class="nav-item px-3" b-ajqwrrfjf8><a href="environmentview-discovery" class="nav-link"><span class="bi bi-list-nested-nav-menu" aria-hidden="true" b-ajqwrrfjf8></span> Basic Rendering
+            </a></div>
+
+        <div class="nav-item px-3" b-ajqwrrfjf8><a href="environment-ssr" class="nav-link"><span class="bi bi-list-nested-nav-menu" aria-hidden="true" b-ajqwrrfjf8></span> Static SSR
+            </a></div>
+
+        <div class="nav-item px-3" b-ajqwrrfjf8><a href="environment-server" class="nav-link"><span class="bi bi-list-nested-nav-menu" aria-hidden="true" b-ajqwrrfjf8></span> Interactive Server
+            </a></div>
+
+        <div class="nav-item px-3" b-ajqwrrfjf8><a href="environment-webassembly" class="nav-link"><span class="bi bi-list-nested-nav-menu" aria-hidden="true" b-ajqwrrfjf8></span> WebAssembly
+            </a></div>
+
+        <div class="nav-item px-3" b-ajqwrrfjf8><a href="environment-auto" class="nav-link active" aria-current="page"><span class="bi bi-list-nested-nav-menu" aria-hidden="true" b-ajqwrrfjf8></span> Interactive Auto
+            </a></div></nav></div></div>
+
+    <main b-r215xwi2mi><div class="top-row px-4" b-r215xwi2mi><a href="https://learn.microsoft.com/aspnet/core/" target="_blank" b-r215xwi2mi>About</a></div>
+
+        <article class="content px-4" b-r215xwi2mi><!--Blazor-Configuration:eyJ3ZWJBc3NlbWJseSI6eyJlbnZpcm9ubWVudE5hbWUiOiJRQSIsImVudmlyb25tZW50VmFyaWFibGVzIjp7fX0sInNlcnZlciI6e30sInNzciI6e319--><!--Blazor:{"type":"auto","prerenderId":"ed723fe86a924b6a9170d59bd12a263d","key":{"locationHash":"DE468C6756A707CA5C43B47E971ECA4020D1A00BC41C9F86EE79F9BFA5B4C69D:0","formattedComponentKey":""},"sequence":0,"descriptor":"CfDJ8KJX2AEvTiFOs8c8RypWWlXKFXFMUHVVMwI5UJE\u002B5tvZ13EuAIembhnntd3LZVoA/7AComVGHpSLOUMKuhxbmqB6OeTXHeri8AvKMz96OP8Zyyxpamha\u002BUP4ajg9TMLm90y3sjw4oxMdrVmf/bgQzlyduOO89yynesMiBwfsTlANgkf9oXfEjp4AjorwY1LDnszGINejmoQ6IWdnn7mtn5BjD4fVkM0BSfEX065Y9TuKcrOobn1WqBZhAdMUQouUF5T2zvQoCeht8/Wq6SbM6CdpQEX7IGLS01hHsTL5dUn4uFPtPaG8W3MRdnsGAMYgq4p0cN23Cx/8OmddXIvFdApKAwzWw5tmp5/ddX9NnL8dQs4lmg7Xm1sryMWmqlh1bUY6RO1PjZVxNKikF46xFoTMfc\u002BCfVZqcsSMBuzgtfWlStW1xpIpU4EOp0vjtiLpkaOS\u002BEdylb9Jjtgx2LLDMWwKkSJHwEViDlR7V4t0tz49DmY0A1QiPVdpQ9tQyqEvGOP2r9P0IO1AF27PLR25VjMehd4zcGWIF8LJfAVmqQ3Ps01p3YQyU3zWjD4LT3YU6Q==","assembly":"BlazorWebApp.Client","typeName":"BlazorWebApp.Client.Pages.EnvironmentViewAuto","parameterDefinitions":"W10=","parameterValues":"W10="}-->
+
+<h1>EnvironmentView - Static</h1>
+<p>Current hosting environment: <strong id="environment-name">Production</strong></p>
+
+
+
+<div class="environment-result production" id="include-production">Include Testing [Include="Production"]: PRODUCTION ONLY</div>
+
+
+
+
+
+<div class="environment-result development" id="exclude-development">Exclude Testing [Exclude="Development"]: NOT DEVELOPMENT</div>
+
+
+
+<div class="environment-result staging" id="exclude-staging">Exclude Testing [Exclude="Staging"]: NOT STAGING</div>
+
+<div class="environment-result qa" id="exclude-qa">Exclude Testing [Exclude="QA"]: NOT QA</div>
+
+
+
+<div class="environment-result preproduction" id="all-environments">MultipleEnvironments [Include="Development, Production, Staging, QA"]: ALL ENVIRONMENTS</div>
+
+
+
+<div class="environment-result" id="case-insensitive-include">Include Testing [Include="development, production, staging, qa"]: CASE-INSENSITIVE MATCH</div>
+
+
+
+<div class="environment-result" id="case-insensitive-exclude-preproduction">Exclude Testing [Exclude="development, staging, qa"]: CASE-INSENSITIVE MATCH</div>
+
+<div class="environment-result" id="whitespace-list">Include Testing [Include=" Development , Production, QA , Staging "]: WHITESPACE-TRIMMED LIST</div>
+
+
+
+
+
+<div class="environment-result failure" id="include-miss-exclude-match">Include Production and exclude Development: MUST NOT RENDER IN DEVELOPMENT</div>
+
+
+
+<div class="environment-result failure" id="include-miss-exclude-miss">Include Production and exclude QA: MUST NOT RENDER IN DEVELOPMENT</div>
+
+<div class="environment-result" id="empty-include">[Include=""] EMPTY INCLUDE RENDERS</div>
+
+<div class="environment-result" id="empty-exclude">[Exclude=""] EMPTY EXCLUDE RENDERS</div>
+
+<div class="environment-result" id="no-parameters">NO PARAMETERS RENDERS</div>
+
+
+
+
+
+<div class="environment-result failure" id="nested-exclude-development-include-production">Outer excludes Development: MUST NOT RENDER IN DEVELOPMENT</div>
+
+<div class="environment-result failure" id="nested-include-production-include-production">Outer includes Production: MUST NOT RENDER IN DEVELOPMENT</div>
+
+<div class="environment-result failure" id="nested-include-production-exclude-development">Outer includes Production: MUST NOT RENDER IN DEVELOPMENT</div>
+
+
+
+<!--Blazor:{"prerenderId":"ed723fe86a924b6a9170d59bd12a263d"}--></article></main></div>
+
+<div id="blazor-error-ui" data-nosnippet b-r215xwi2mi>
+    An unhandled error has occurred.
+    <a href="." class="reload" b-r215xwi2mi>Reload</a>
+    <span class="dismiss" b-r215xwi2mi>🗙</span></div>
+        <blazor-focus-on-navigate selector="h1"></blazor-focus-on-navigate>
+    <script type="module" src="Components/Layout/ReconnectModal.abdmv1u4y3.razor.js" b-gl6gd3bh48></script>
+
+<dialog id="components-reconnect-modal" data-nosnippet b-gl6gd3bh48><div class="components-reconnect-container" b-gl6gd3bh48><div class="components-rejoining-animation" aria-hidden="true" b-gl6gd3bh48><div b-gl6gd3bh48></div>
+            <div b-gl6gd3bh48></div></div>
+        <p class="components-reconnect-first-attempt-visible" b-gl6gd3bh48>
+            Rejoining the server...
+        </p>
+        <p class="components-reconnect-repeated-attempt-visible" b-gl6gd3bh48>
+            Rejoin failed... trying again in <span id="components-seconds-to-next-attempt" b-gl6gd3bh48></span> seconds.
+        </p>
+        <p class="components-reconnect-failed-visible" b-gl6gd3bh48>
+            Failed to rejoin.<br b-gl6gd3bh48>Please retry or reload the page.
+        </p>
+        <button id="components-reconnect-button" class="components-reconnect-failed-visible" b-gl6gd3bh48>
+            Retry
+        </button>
+        <p class="components-pause-visible" b-gl6gd3bh48>
+            The session has been paused by the server.
+        </p>
+        <p class="components-resume-failed-visible" b-gl6gd3bh48>
+            Failed to resume the session.<br b-gl6gd3bh48>Please retry or reload the page.
+        </p>
+        <button id="components-resume-button" class="components-pause-visible components-resume-failed-visible" b-gl6gd3bh48>
+            Resume
+        </button></div></dialog>
+    <script src="_framework/blazor.web.dno4xfe4w5.js"></script></body></html><!--Blazor-Server-Component-State:CfDJ8KJX2AEvTiFOs8c8RypWWlWK6lZemEeKlUETU2Ec6x6NL4cc9tcYckgb9FK7ZGIxNsJSV2HembQCr6JLo2QJ4sttVBdesEE9Fd7zZINFok21fxaLgTur1bnNYVaL6Y670Oo+EUw02doqKLD2I7z61oo8OWGSusoQNl4+nekrbxEDV1nzoU8Iwa20Ew9Ebay+RoBkxcTBH3ewCcIkHroWLvfp3YEGwcOm09RxkCMZMN3VdF3BbtB3o0pNIOHYnkd5GcPOC2wkDbaXQpiTQYHTWzQTknJY2tjmFhvMQ/MXsPt2Jc48jw2Ww4oeMr2N3a4nfrlIehDtLSjlPkCoREkyLLcG184XHZTNXDvjR5HXc4ftRYjYH0NJFPASN5g/nmirldF5eZBvCRtSbUUirAPKglKpcz6LuJq6aUwy0NXRwsU6blXP8M1uRb8Av5a1JrPn7NF+rqYDHsPGq8qTV3PXanrHWWT1zSIcYswrU5AlQ+k55G0K6vFAUNLSGXGxhdA/CTc7BnKamF2sMiftyAycmc0vbKlib2GnytuS/YI/xx+rzpH5+OYr6VJZ6Rns34mOGmYDaN3rIYN6lFrF3mdb3g+P1e4w8ykhltHQMSi5orI3x1jVAllUt5tz1rWUEuHkcblRgpfgftxifIe90bV9csDDaYpCcpTriBNGsnhTIxQzq7LIB2eznGaC6cc5F4hrhJbTogEV/dPvmnY8xJDSw7EsesXtXEgGIZ7RXXGs2DEnd+Q534gyghP/ooBCPLbWtz8Y5qNVRVn+DNee1HFpDJT6z4mnqZudQRuXj6ggkoSounQB4DijFZO0K1Pnf+go3NIkmZGyF9zTb5cjwpFJ1hp7vWySUYIlhx4wt7ERC5hYOW5GB4ubqxainNwV06BaExUAGuGHUw6PNaN1CPl3ctnReBpTVucD3nvC6eKthCYg--><!--Blazor-WebAssembly-Component-State:eyJLOVRlM0xEYlx1MDAyQjZ4ZkpDLzBSVDBCR0xRT3ZwWGlQNEtJU2dBa096RG5za0E9IjoiSWk0dlgyWnlZVzFsZDI5eWF5OXlaWE52ZFhKalpTMWpiMnhzWldOMGFXOXVMbmRhVlRSVExtcHpJZz09IiwiTWljcm9zb2Z0LkFzcE5ldENvcmUuQ29tcG9uZW50cy5JbmZyYXN0cnVjdHVyZS5QZXJzaXN0ZW50U2VydmljZXNSZWdpc3RyeSI6Ilczc2lZWE56WlcxaWJIa2lPaUpOYVdOeWIzTnZablF1UVhOd1RtVjBRMjl5WlM1RGIyMXdiMjVsYm5SekxrVnVaSEJ2YVc1MGN5SXNJbVoxYkd4VWVYQmxUbUZ0WlNJNklrMXBZM0p2YzI5bWRDNUJjM0JPWlhSRGIzSmxMa052YlhCdmJtVnVkSE11VW1WemIzVnlZMlZEYjJ4c1pXTjBhVzl1VUhKdmRtbGtaWElpZlN4N0ltRnpjMlZ0WW14NUlqb2lUV2xqY205emIyWjBMa0Z6Y0U1bGRFTnZjbVV1UTI5dGNHOXVaVzUwY3k1WFpXSWlMQ0ptZFd4c1ZIbHdaVTVoYldVaU9pSk5hV055YjNOdlpuUXVRWE53VG1WMFEyOXlaUzVEYjIxd2IyNWxiblJ6TGtadmNtMXpMa0Z1ZEdsbWIzSm5aWEo1VTNSaGRHVlFjbTkyYVdSbGNpSjlMSHNpWVhOelpXMWliSGtpT2lKTmFXTnliM052Wm5RdVFYTndUbVYwUTI5eVpTNURiMjF3YjI1bGJuUnpMbGRsWWtGemMyVnRZbXg1TGxObGNuWmxjaUlzSW1aMWJHeFVlWEJsVG1GdFpTSTZJazFwWTNKdmMyOW1kQzVCYzNCT1pYUkRiM0psTGtOdmJYQnZibVZ1ZEhNdVEzVnNkSFZ5WlZOMFlYUmxVSEp2ZG1sa1pYSWlmVjA9In0=-->

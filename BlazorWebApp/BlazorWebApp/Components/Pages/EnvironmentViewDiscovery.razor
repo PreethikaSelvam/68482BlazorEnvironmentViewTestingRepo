@@ -1,0 +1,14 @@
+@page "/environmentview-discovery"
+@using Microsoft.Extensions.Hosting
+@inject IHostEnvironment Environment
+
+<h1>EnvironmentView - @RendererInfo.Name</h1>
+
+<p>Current environment: <strong id="environment-name">@Environment.EnvironmentName</strong></p>
+
+<EnvironmentView Exclude="Development">
+    <p>Exclude EnvironmentView works!</p>
+</EnvironmentView>
+<EnvironmentView Include="Development">
+    <p>Include EnvironmentView works!</p>
+</EnvironmentView>

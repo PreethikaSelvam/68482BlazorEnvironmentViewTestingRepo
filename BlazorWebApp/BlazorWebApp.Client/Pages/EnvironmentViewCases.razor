@@ -1,0 +1,138 @@
+@using Microsoft.Extensions.Hosting
+@inject IHostEnvironment Environment
+
+<p>Current hosting environment: <strong id="environment-name">@Environment.EnvironmentName</strong></p>
+
+<EnvironmentView Include="Development">
+    <div class="environment-result development" id="include-development">Include Testing [Include="Development"]: DEVELOPMENT ONLY</div>
+</EnvironmentView>
+
+<EnvironmentView Include="Production">
+    <div class="environment-result production" id="include-production">Include Testing [Include="Production"]: PRODUCTION ONLY</div>
+</EnvironmentView>
+
+<EnvironmentView Include="Staging">
+    <div class="environment-result staging" id="include-staging">Include Testing [Include="Staging"]: STAGING ONLY</div>
+</EnvironmentView>
+
+<EnvironmentView Include="QA">
+    <div class="environment-result qa" id="include-qa">Include Testing [Include="QA"]: QA ONLY</div>
+</EnvironmentView>
+
+<EnvironmentView Exclude="Development">
+    <div class="environment-result development" id="exclude-development">Exclude Testing [Exclude="Development"]: NOT DEVELOPMENT</div>
+</EnvironmentView>
+
+<EnvironmentView Exclude="Production">
+    <div class="environment-result non-production" id="exclude-production">Exclude Testing [Exclude="Production"]: NON-PRODUCTION</div>
+</EnvironmentView>
+
+<EnvironmentView Exclude="Staging">
+    <div class="environment-result staging" id="exclude-staging">Exclude Testing [Exclude="Staging"]: NOT STAGING</div>
+</EnvironmentView>
+
+<EnvironmentView Exclude="QA">
+    <div class="environment-result qa" id="exclude-qa">Exclude Testing [Exclude="QA"]: NOT QA</div>
+</EnvironmentView>
+
+<EnvironmentView Include="Development, Staging, QA">
+    <div class="environment-result preproduction" id="preproduction">MultipleEnvironments [Include="Development, Staging, QA"]: PRE-PRODUCTION</div>
+</EnvironmentView>
+
+<EnvironmentView Include="Development, Production, Staging, QA">
+    <div class="environment-result preproduction" id="all-environments">MultipleEnvironments [Include="Development, Production, Staging, QA"]: ALL ENVIRONMENTS</div>
+</EnvironmentView>
+
+<EnvironmentView Exclude="Development, Production, Staging, QA">
+    <div class="environment-result preproduction" id="excluded-environments">MultipleEnvironments [Exclude="Development, Production, Staging, QA"]: EXCLUDED ENVIRONMENTS</div>
+</EnvironmentView>
+
+<EnvironmentView Include="development, production, staging, qa">
+    <div class="environment-result" id="case-insensitive-include">Include Testing [Include="development, production, staging, qa"]: CASE-INSENSITIVE MATCH</div>
+</EnvironmentView>
+
+<EnvironmentView Exclude="development, production, staging, qa">
+    <div class="environment-result" id="case-insensitive-exclude-all">Exclude Testing [Exclude="development, production, staging, qa"]: CASE-INSENSITIVE MATCH</div>
+</EnvironmentView>
+
+<EnvironmentView Exclude="development, staging, qa">
+    <div class="environment-result" id="case-insensitive-exclude-preproduction">Exclude Testing [Exclude="development, staging, qa"]: CASE-INSENSITIVE MATCH</div>
+</EnvironmentView>
+
+<EnvironmentView Include=" Development , Production, QA , Staging ">
+    <div class="environment-result" id="whitespace-list">Include Testing [Include=" Development , Production, QA , Staging "]: WHITESPACE-TRIMMED LIST</div>
+</EnvironmentView>
+
+<EnvironmentView Include="Development" Exclude="QA">
+    <div class="environment-result" id="include-match-exclude-miss">Include Development and exclude QA: RENDERS IN DEVELOPMENT</div>
+</EnvironmentView>
+
+<EnvironmentView Exclude="QA" Include="Development">
+    <div class="environment-result" id="exclude-first-include-match">Exclude QA and include Development: RENDERS REGARDLESS OF ATTRIBUTE ORDER</div>
+</EnvironmentView>
+
+<EnvironmentView Include="Production" Exclude="Development">
+    <div class="environment-result failure" id="include-miss-exclude-match">Include Production and exclude Development: MUST NOT RENDER IN DEVELOPMENT</div>
+</EnvironmentView>
+
+<EnvironmentView Include="Development" Exclude="Development">
+    <div class="environment-result failure" id="include-match-exclude-match">Include and exclude Development: EXCLUDE WINS, SO THIS MUST NOT RENDER</div>
+</EnvironmentView>
+
+<EnvironmentView Include="Production" Exclude="QA">
+    <div class="environment-result failure" id="include-miss-exclude-miss">Include Production and exclude QA: MUST NOT RENDER IN DEVELOPMENT</div>
+</EnvironmentView>
+
+<EnvironmentView Include="">
+    <div class="environment-result" id="empty-include">[Include=""] EMPTY INCLUDE RENDERS</div>
+</EnvironmentView>
+
+<EnvironmentView Exclude="">
+    <div class="environment-result" id="empty-exclude">[Exclude=""] EMPTY EXCLUDE RENDERS</div>
+</EnvironmentView>
+
+<EnvironmentView>
+    <div class="environment-result" id="no-parameters">NO PARAMETERS RENDERS</div>
+</EnvironmentView>
+
+<EnvironmentView Include="Development">
+    <EnvironmentView Exclude="Production">
+        <div class="environment-result" id="nested-include-development-exclude-production">Outer includes Development; inner excludes Production: RENDERS IN DEVELOPMENT</div>
+    </EnvironmentView>
+</EnvironmentView>
+
+<EnvironmentView Include="Development">
+    <EnvironmentView Include="Production">
+        <div class="environment-result failure" id="nested-include-development-include-production">Outer includes Development, but inner includes Production: MUST NOT RENDER IN DEVELOPMENT</div>
+    </EnvironmentView>
+</EnvironmentView>
+
+<EnvironmentView Exclude="Development">
+    <EnvironmentView Include="Production">
+        <div class="environment-result failure" id="nested-exclude-development-include-production">Outer excludes Development: MUST NOT RENDER IN DEVELOPMENT</div>
+    </EnvironmentView>
+</EnvironmentView>
+
+<EnvironmentView Include="Production">
+    <EnvironmentView Include="Production">
+        <div class="environment-result failure" id="nested-include-production-include-production">Outer includes Production: MUST NOT RENDER IN DEVELOPMENT</div>
+    </EnvironmentView>
+</EnvironmentView>
+
+<EnvironmentView Include="Production">
+    <EnvironmentView Exclude="Development">
+        <div class="environment-result failure" id="nested-include-production-exclude-development">Outer includes Production: MUST NOT RENDER IN DEVELOPMENT</div>
+    </EnvironmentView>
+</EnvironmentView>
+
+<EnvironmentView Exclude="Production">
+    <EnvironmentView Include="Development">
+        <div class="environment-result" id="nested-exclude-production-include-development">Outer excludes Production; inner includes Development: RENDERS IN DEVELOPMENT</div>
+    </EnvironmentView>
+</EnvironmentView>
+
+<EnvironmentView Exclude="Production">
+    <EnvironmentView Exclude="Development">
+        <div class="environment-result failure" id="nested-exclude-production-exclude-development">Outer excludes Production, but inner excludes Development: MUST NOT RENDER IN DEVELOPMENT</div>
+    </EnvironmentView>
+</EnvironmentView>
