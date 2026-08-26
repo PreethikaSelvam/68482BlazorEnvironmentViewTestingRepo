@@ -1,0 +1,6 @@
+Environment used for the EnvironmentView validation
+
+Operating system: Windows 11 x64
+.NET SDK: 11.0.100-preview.7.26381.103
+Google Chrome: 151.0.7922.174
+Visual Studio Code: 1.134.0
